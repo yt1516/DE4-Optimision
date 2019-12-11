@@ -1,3 +1,5 @@
+% For plotting the real time change of coordinates when using PS
+
 function stop = PSfun(optimvalues, ~)
 coord_out = optimvalues.x;
 x_coord=[];

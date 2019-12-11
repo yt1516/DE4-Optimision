@@ -1,4 +1,5 @@
 function [Power_Output, install_cost, maintain_cost, turbines]=turb_selection(x,y,Pctstart,Pctend)
+%% Load all datasets
 load = readtable('oneYearPower.csv');
 wt_power = readtable('WT_Pout.csv');
 wt_models = readtable('price.csv');
@@ -17,7 +18,7 @@ incre = (Pctend-Pctstart)/10;
 for i=Pctstart:incre:Pctstart+10*incre
     load_avg(end+1)=prctile(load_time,i); % compute load constraints for a range of percentiles based on system optimisation.
 end
-%%
+%% Linear Programming Optimisation
 cost = wt_models.cost;
 model_avg = model_avg/1000000; % output in MW
 area = wt_models.area;
@@ -28,7 +29,7 @@ beq = [];
 turbines=[];
 f = cost';
 intcon = 1:1:length(cost);
-%%
+
 for i=1:1:length(load_avg)
     A = [-model_avg'
         area'];
@@ -40,13 +41,13 @@ end
 c_list = cost.*turbines;
 install_cost=[];
 maintain_cost=[];
-%%
+%% Producing outputs
 for i=1:1:length(c_list(1,:))
     c_current=sum(c_list(:,i));
     install_cost(end+1)=c_current;
     maintain_cost(end+1)=c_current*0.17;
 end
-%%
+
 Power_Output = zeros(length(turbines(1,:)),length(Pout_MW));
 for ii=1:1:length(turbines(1,:))
     for i=1:1:length(turbines(:,1))

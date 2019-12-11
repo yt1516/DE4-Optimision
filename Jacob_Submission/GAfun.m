@@ -1,3 +1,5 @@
+% For plotting the real time change of coordinates when using GA
+
 function state = GAfun(~, state, ~)
 [~,loc] = min(state.Score);
 coord_out = state.Population(loc,:);
