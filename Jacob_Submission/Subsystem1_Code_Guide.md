@@ -43,3 +43,15 @@ Go to Add-Ons and install Global Optimization Toolbox
 
 `turb_placement.m`: Uses Pattern Search to place the selected turbine models into the given build area to maximise the power output of the wind turbine farm.
 
+### Outputs
+Running `Demo.m` will generate the following outputs:
+
+_Model_Name_: names of the selected turbine models.
+
+_Numbers_: the number of each selected turbine models. 
+
+_Installation_Cost_: the cost of purchasing the selected turbine models. 
+
+_Final_Power_Output_: a one-year power output from the selected turbine models.
+
+_Turbine_Locations_: the locations of each selected turbine model in the given build area
