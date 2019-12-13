@@ -1,8 +1,15 @@
 #  LP Method for the Optimisation of BESS Charge Scheduling
 
 
+*Note, there is an error in this version*  `subsystem_III.m` *a line was omitted.* 
+
+*This was submitted correctly in the version of the file in Subsystem II* `BEN_BESS_profit.m`
+
+`result = total_profit_array` *Was added back to the final line of the outer loop of the function in versions submitted since 5PM to correct. *
+
 ### Functions
 `subsystem_III.m`: The sub-system code called by the system-level code. It takes in the following variables:
+*See error notice above*
 
 `portal.m`: The 'portal' that might be viewed by a Renewable System Manager for running a site. 
 
