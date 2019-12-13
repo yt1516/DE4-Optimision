@@ -3,20 +3,21 @@ clear all
 
 analysed_profiles = 50:5:100; %defining the initial spread of profiles
 profile_space = 5;
-
+Load_perhouse = csvread('JACOB_Load_Use.csv',1,1);
 L = 3;
 
 for i = 1:L
     
-    %Jacob, replace the Pn input with your output and Load_perhouse with
-    %your input for load
-    WTFout_Combined = matfile('JACOB_11_Profiles.mat');
-    Pn  = WTFout_Combined.Complete_Pout;
-    Load_perhouse = csvread('JACOB_Load_Use.csv',1,1);
-    Turbine_Base = matfile('JACOB_11_Profiles.mat');
-    Turbine_Base = Turbine_Base.c_out_sam;
+    x = 1.2; % width of the area
+    y = 1.2; % length of the area
+    Pctstart=analysed_profiles(1); % default starting percentile
+    Pctend=analysed_profiles(11); % default finishing percentile
 
-    [optimal_Cost, wind_turbine_profile, ratio] = SAM_Opt_One_Profit(Pn, Load_perhouse, Turbine_Base);
+    [Power_Output, install_cost, maintain_cost, turbines]=turb_selection(x,y,Pctstart,Pctend);
+    
+    Turbine_Cost = install_cost + maintain_cost;
+    
+    [optimal_Cost, wind_turbine_profile, ratio] = SAM_Opt_One_Profit(Power_Output, Load_perhouse, Turbine_Cost);
 
     profile_space = profile_space/((i)*11); %shrink the profile space
     
