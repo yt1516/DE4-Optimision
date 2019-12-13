@@ -2,7 +2,7 @@ function [result] = BEN_BESS_profit(help, BESS_capacity)
 
 year_wind_profile = help';
 
-year_microgrid_load_profile = csvread('JACOB_Load_Use.csv',1,1);
+year_microgrid_load_profile = csvread('oneYearPower.csv',1,1);
 
 year_grid_import_price_profile = struct2array(load('grid_import_pricing'));
 year_grid_import_price_profile = year_grid_import_price_profile';
