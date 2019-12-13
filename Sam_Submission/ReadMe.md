@@ -1,5 +1,5 @@
 # Model Construction and Subsystem 2
-This guide provides detailed walkthrough of how the datasets output from subsystem one are turned into useful models for subsystem two and then optimised
+This ReadMe file provides detailed walkthrough of how the datasets output from subsystem one are turned into useful models for subsystem two and then optimised
 There are two optimisations. One standalone which completes a quick optimisation for the first stage outlined in the submitted paper, and a second which completes the system optimisation.
 
 ## Global Code
@@ -28,7 +28,7 @@ As mentioned above, this master code is used to generate the cheapest option ove
 This master code should be used if looking for outside investment as it also considers returning their money, and profits, to them, whilst giving the community free sustainable energy
 
 ### Outputs
-Running `Demo.m` will generate the following outputs:
+Running either master code will generate the following outputs:
 
 _Model_Name_: names of the selected turbine models.
 
