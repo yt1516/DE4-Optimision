@@ -27,6 +27,10 @@ grid_export_limit
 `portal.m`: The 'portal' that might be viewed by a Renewable System Manager for running a site. 
 
 ![alt text](https://github.com/yt1516/DE4-Optimision/blob/master/Ben/bigportal.png)
+
+
+`legend.m`: For generating the legend - did not fit on subplot
+
 ![alt text](https://github.com/yt1516/DE4-Optimision/blob/master/Ben/legend.png)
 
 ### Input Datasets
