@@ -2,6 +2,9 @@
 This ReadMe file provides detailed walkthrough of how the datasets output from subsystem one are turned into useful models for subsystem two and then optimised
 There are two optimisations. One standalone which completes a quick optimisation for the first stage outlined in the submitted paper, and a second which completes the system optimisation.
 
+## First Step
+Before running the optimisation in `Master_Code_Looped.m` please run the python scripts outlined in Jacob_Submission. These will generate all of the neccessary datasheets to run this optimisation
+
 ## Global Code
 These instructions are for both optimisations
 
