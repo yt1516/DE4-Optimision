@@ -213,14 +213,18 @@ function result = run_scheduling_optimiser( time_interval, ...
         struct_prob.options = optimoptions('linprog','Algorithm','dual-simplex', 'Display', 'iter');
         
         [solution,fval,exitflag,output] = linprog(struct_prob)
+        
        
         disp(day)
         total_profit_array(day,1) = fval;
         tic
 
         
-        
+       
         
     end
+    
+    result = total_profit_array;
+
     
 end
