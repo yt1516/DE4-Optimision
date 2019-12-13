@@ -1,4 +1,4 @@
-function[optimal_cost, wind_turbine_profile, capacity] = SAM_Opt_One_Standalone(Pn, Load_perhouse)
+function[optimal_cost, wind_turbine_profile, capacity] = SAM_Opt_One_Standalone(Pn, Load_perhouse, Turbine_Base)
 
 % A file to show the concept of taking half hourly turbine power outputs
 % and the microgrid half hourly loads and defining the power surplus per
@@ -136,8 +136,6 @@ for n = 1:4
     Final_Cost(:,:,n) = [Shortage_Costs + Cbess_Final(:,:,n)];
 end 
 
-Turbine_Base = matfile('JACOB_11_Profiles.mat');
-Turbine_Base = Turbine_Base.c_out_sam;
 Turbine_Cost = ones(11,20,4);
 
 for n = 1:11
