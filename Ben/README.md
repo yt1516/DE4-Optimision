@@ -5,7 +5,7 @@
 
 *This was submitted correctly in the version of the file in Subsystem II* `BEN_BESS_profit.m`
 
-`result = total_profit_array` *Was added back to the final line of the outer loop of the function in versions submitted since 5PM to correct. *
+`result = total_profit_array` *Was added back to the final line of the outer loop of the function in versions submitted since 5PM to correct.*
 
 ### Functions
 `subsystem_III.m`: The sub-system code called by the system-level code. It takes in the following variables:
