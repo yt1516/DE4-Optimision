@@ -6,7 +6,7 @@ There are two optimisations. One standalone which completes a quick optimisation
 These instructions are for both optimisations
 
 ### Input Datasets
-`Power_Output` `oneYearPower.csv` and `price` Place these three files into the same directory as the MATLAB files. 
+`JACOB_11_Profiles.mat` and `JACOB_Load_Use.csv`. Place these three files into the same directory as the MATLAB files. 
 
 ### Functions
 `SAM_List_Simplify.m`: Takes in `oneYearPower.csv` and `Power_Output` and creates a new usable dataset, `power_surplus`.
