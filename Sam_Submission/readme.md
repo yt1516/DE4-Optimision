@@ -9,23 +9,23 @@ These instructions are for both optimisations
 `Power_Output` `oneYearPower.csv` and `price` Place these three files into the same directory as the MATLAB files. 
 
 ### Functions
-`SAM_Grouper.m`: Generate a wind turbine farm for an area of 2 km by 2 km with electricity load profile from `oneYearPower.csv`.
+`SAM_List_Simplify.m`: Takes in `oneYearPower.csv` and `Power_Output` and creates a new usable dataset, `power_surplus`.
 
-`SAM_List_Simplify.m`: Uses Linear Programming to select the turbine models and the number of them for a build area and a load requirement profile. 
+`SAM_Grouper.m`: groups the negative and positive values of `power_surplus` together before creating the macro period profiles.
 
-`SAM_Profile_Adjuster.m`: Uses Pattern Search to place the selected turbine models into the given build area to maximise the power output of the wind turbine farm.
+`SAM_Profile_Adjuster.m`: Uses a capacity distribution called `ratio` to adjust the profile lists and generate the capacity shortage after the BESS is installed over the time period.
 
-'BEN_BESS_Profit':
+`BEN_BESS_Profit.m`: An imported function from subsystem three which calculates the profits for each battery capacity.
 
-'SAM_Opt_One_Standalone':
+`SAM_Opt_One_Standalone.m`: A standalone function for subsystem 2 for a simple 'cheapest option' optimisation. Does not consider the output from `BEN_BESS_Profit.m` or the payback period.
 
-'SAM_Opt_One_Profit':
+`SAM_Opt_One_Profit.m`: The system level optimisation which considers payback period and outputs the cheapest option, which returns the investment in 20 years.
 
 ## Master_Code_Standalone
-These instructions are for both optimisations
+As mentioned above, this master code is used to generate the cheapest option over 20 years. This is the optimiation to use if a local community is supporting itselfas they are paying for it.
 
 ## Master_Code_Looped
-These instructions are for both optimisations
+This master code should be used if looking for outside investment as it also considers returning their money, and profits, to them, whilst giving the community free sustainable energy
 
 ### Outputs
 Running `Demo.m` will generate the following outputs:
