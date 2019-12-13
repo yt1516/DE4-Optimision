@@ -19,7 +19,7 @@
 ### Input Variables
 `time_interval` : Time interval length (hours)
 
-`resolution` : Skip to only run every *resolution* days
+`resolution` : Skip to only run every * resolution * days
 
 `BESS_capacity`: BESS capacity (kWh) from Subsystem 2
 
@@ -29,24 +29,24 @@
 
 `year_grid_export_income_profile`: Profit from energy sale (assumed 70% of purchase price) 
 
-`year_wind_profile`
+`year_wind_profile`: Wind energy supply (kWh) from Subsystem 1
 
-`BESS_max_discharge_rate`
+`BESS_max_discharge_rate`: Limit for discharge rate from BESS (kW)
 
-`BESS_max_charge_rate`
+`BESS_max_charge_rate` : Limit for discharge rate to BESS (kW)
 
-`BESS_max_SOC_pct`
+`BESS_max_SOC_pct` : Maximum State of Charge limit (% of capacity)
 
-`BESS_min_SOC_pct `
+`BESS_min_SOC_pct `: Minimum State of Charge limit (% of capacity)
 
-`BESS_operating_cost`
+`BESS_operating_cost`: Operational cost of BESS discharged (£/kwh)
 
-`BESS_round_trip_efficiency`
+`BESS_round_trip_efficiency`: Round trip efficiency - the ratio of energy charged to energy retrieved, for a transaction of equal amounts of energy in and out of an Energy Storage System
 
-`WTG_operating_cost`
+`WTG_operating_cost`: Operational cost supplied from WTG (£/kwh)
 
-`grid_import_limit`
+`grid_import_limit`: Limit for import rate from grid (kW)
 
-`grid_export_limit`
+`grid_export_limit`: Limit for export rate to grid (kW)
 
 
