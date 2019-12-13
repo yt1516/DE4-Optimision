@@ -26,6 +26,8 @@ grid_export_limit
 
 `portal.m`: The 'portal' that might be viewed by a Renewable System Manager for running a site. 
 
+![alt text](https://github.com/yt1516/DE4-Optimision/blob/master/Ben/bigportal.png)
+![alt text](https://github.com/yt1516/DE4-Optimision/blob/master/Ben/legend.png)
 
 ### Input Datasets
 `microgrid_load.mat` and `grid_import_pricing.mat` and `turbine_power_out.mat`. are example versions of the datasets that might be run through the scheduler at a system level. Place these three files into the same directory when running `subsystem_III.m`. 
