@@ -3,7 +3,7 @@ clear all
 
 analysed_profiles = 50:5:100; %defining the initial spread of profiles
 profile_space = 5;
-Load_perhouse = csvread('JACOB_Load_Use.csv',1,1);
+Load_perhouse = csvread('oneYearPower.csv',1,1);
 L = 3;
 
 for i = 1:L
