@@ -1,8 +1,9 @@
-function [optimal_cost, wind_turbine_profile, ratio] = SAM_Opt_One_Standalone(Pn, Load_perhouse)
+function[optimal_cost, wind_turbine_profile, capacity] = SAM_Opt_One_Standalone(Pn, Load_perhouse)
 
 % A file to show the concept of taking half hourly turbine power outputs
 % and the microgrid half hourly loads and defining the power surplus per
 % day over a year period
+
 
 Load = Load_perhouse; 
 Load = Load';
@@ -152,5 +153,26 @@ Minimum_Coordinates_1 = [ii, jj, k];
 optimal_cost = Final_Cost(Minimum_Coordinates_1(1), Minimum_Coordinates_1(2), Minimum_Coordinates_1(3));
 wind_turbine_profile = ii;
 ratio = (20-jj+1)/20;
-
+if ii == 1
+    capacity = Profile_1(1)*ratio;
+elseif ii == 2
+    capacity = Profile_2(1)*ratio;
+elseif ii == 2
+    capacity = Profile_3(1)*ratio;
+elseif ii == 2
+    capacity = Profile_4(1)*ratio;
+elseif ii == 2
+    capacity = Profile_5(1)*ratio;
+elseif ii == 2
+    capacity = Profile_6(1)*ratio;
+elseif ii == 2
+    capacity = Profile_7(1)*ratio;
+elseif ii == 2
+    capacity = Profile_8(1)*ratio;
+elseif ii == 2
+    capacity = Profile_9(1)*ratio;
+elseif ii == 2
+    capacity = Profile_10(1)*ratio;
+else
+    capacity = Profile_11(1)*ratio;
 end
