@@ -1,5 +1,9 @@
-function [opt_cost_2, wind_turbine_profile, capacity] = SAM_Opt_One_Profit(Pn, Load_perhouse, Turbine_Base)
 
+WTFout_Combined = matfile('JACOB_11_Profiles.mat');
+Pn  = WTFout_Combined.Complete_Pout;
+Load_perhouse = csvread('oneYearPower.csv',1,1);
+Turbine_Base = matfile('JACOB_11_Profiles.mat');
+Turbine_Base = Turbine_Base.c_out_sam;
 % A file to show the concept of taking half hourly turbine power outputs
 % and the microgrid half hourly loads and defining the power surplus per
 % day over a year period
@@ -157,7 +161,7 @@ Year_Profit = [];
 % For loop to use Ben's Code 
 for profile = 1:11
     for ratio = 1:20
-        Profit = BEN_BESS_profit(Pn(profile,:), ratio_profile(ratio,profile));
+        Profit = BEN_BESS_profit2(Pn(profile,:), ratio_profile(ratio,profile));
         Year_Profit_perProfile = [Year_Profit_perProfile, Profit];
     end
     Year_Profit = [Year_Profit; Year_Profit_perProfile];
@@ -232,5 +236,4 @@ elseif ii == 2
     capacity = Profile_10(1)*ratio;
 else
     capacity = Profile_11(1)*ratio;
-
 end
