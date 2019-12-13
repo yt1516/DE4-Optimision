@@ -30,12 +30,8 @@ This master code should be used if looking for outside investment as it also con
 ### Outputs
 Running either master code will generate the following outputs:
 
-_Model_Name_: names of the selected turbine models.
+_wind_turbine_profile_: the wind turbine profile which creates the optimal BESS WTG combination
 
-_Numbers_: the number of each selected turbine models. 
+_capacity_: The Capacity, in kWh, which creates the optimal BESS WTG combination
 
-_Installation_Cost_: the cost of purchasing the selected turbine models. 
-
-_Final_Power_Output_: a one-year power output from the selected turbine models.
-
-_Turbine_Locations_: the locations of each selected turbine model in the given build area
+_optimal_Cost_: the cost of installing and maintaining the system over the 20 year period
