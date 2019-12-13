@@ -1,6 +1,8 @@
 # Dataset Organisation and Subsystem 1
 This guide provides detailed walkthrough of how the datasets used in the system and subsystem 1 are retrieved and organised.
 
+**Please install the Python libraries and run the Python script before the MATLAB scripts!**
+
 ## Python Code
 ### Libraries
 Please install the following libraries if they have not been installed previously.
