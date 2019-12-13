@@ -1,3 +1,9 @@
 # DE4-Optimision
 
-The system level code can be found in `XX`. Each `Name_Submission` folder represents a subsystem, more information about the subsystems can be found in the corresponding folders. 
+`System_Optimisation` contains the system level optimsiation code
+
+`Jacob_Submission` is subsystem 1: Wind Turbine Generator (WTG) optimisation.
+
+`Sam_Submission` is subsystem 2: Battery Energy Storage System (BESS) optimisation.
+
+`Ben` is subsystem 3: LP Method for the Optimisation of BESS Charge Scheduling
